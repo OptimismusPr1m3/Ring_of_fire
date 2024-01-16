@@ -6,7 +6,7 @@
             src="./../../assets/img/cards/card_cover.png">
         <img (click)="takeCard()" class="topCard" style="left: 25px"
             src="./../../assets/img/cards/card_cover.png">
-        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pickCard" style="left: 25px"
-            src="./../../assets/img/cards/ace_1.png">
+        <img id="firstCard" (click)="takeCard()" *ngIf="pickCardAnimation" class="pickCard" style="left: 25px"
+            src="./../../assets/img/cards/{{ currentCard }}.png">
     </div>
 </div>
