@@ -1,0 +1,30 @@
+@import './../../styles.scss';
+
+.startScreen {
+    height: 100vh;
+    width: 100%;
+    background-color: #404040;
+    max-width: 100%;
+    @include dFlex(center, center);
+    >img {
+        height: 100vh;
+    }
+}
+
+.startButton {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @include dFlex(center, center);
+    >img{
+        height: 90px;
+        margin-bottom: -400px;
+        &:hover {
+            filter: brightness(1.2);
+            cursor: pointer;
+        }
+    }
+}
+
