@@ -1,0 +1,18 @@
+@import './../../styles.scss';
+.player {
+    @include dFlex(flex-start, center);
+    background-color: orange;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    >span {
+        font-size: 24px;
+        margin-left: 16px;
+    }
+    >img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
