@@ -1,5 +1,5 @@
-<app-player *ngFor="let player of game.players; let i = index" class="playerPosition" [name]="player"
-    [ngStyle]="{'top.px': 100 + (i * 120)}"></app-player>
+<app-player *ngFor="let player of game.players; let i = index" class="playerPosition" [name]="player" [playerActive]="i == game.currentPlayer"
+    [ngStyle]="{'top.px': 100 + (i * 70)}"></app-player>
 
 <div class="playGround">
     <div class="cardStack">
@@ -14,7 +14,8 @@
             src="./../../assets/img/cards/{{ currentCard }}.png">
     </div>
 </div>
+<app-game-info [card]="currentCard" class="pinBottom"></app-game-info>
 
-<button mat-fab color="primary" class="addButton">
+<button mat-fab color="primary" (click)="openDialog()" class="addButton">
     <mat-icon>add</mat-icon>
 </button>

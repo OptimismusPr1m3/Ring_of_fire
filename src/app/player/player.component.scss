@@ -1,18 +1,23 @@
 @import './../../styles.scss';
 .player {
     @include dFlex(flex-start, center);
-    background-color: orange;
+    background-color: rgba($color: grey, $alpha: 0.5) ;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    width: 300px;
+    max-width: 300px;
+    width: 250px;
     >span {
         font-size: 24px;
         margin-left: 16px;
     }
     >img {
-        height: 100px;
-        width: 100px;
-        object-fit: cover;
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
         border-radius: 50%;
     }
+}
+
+.player-active{
+    background-color: orangered;
 }
