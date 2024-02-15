@@ -4,17 +4,17 @@
 <div class="playGround">
     <div class="cardStack">
         <!--Card stack -->
-        <img [ngStyle]="{'left.px': i * 5}" *ngFor="let c of [0,1,2,3] ; let i = index;"
+        <img [ngStyle]="{'right.px': i * 5}" *ngFor="let c of [0,1,2,3] ; let i = index;"
             src="./assets/img/cards/card_cover.png">
-        <img (click)="takeCard()" class="topCard" style="left: 25px" src="./assets/img/cards/card_cover.png">
+        <img (click)="takeCard()" class="topCard" style="right: 25px" src="./assets/img/cards/card_cover.png">
         <!-- Stack for played cards -->
         <img *ngFor="let card of game.playedCards" class="playedCard" src="./assets/img/cards/{{ card }}.png">
         <!-- Current card animation -->
-        <img id="firstCard" (click)="takeCard()" *ngIf="pickCardAnimation" class="pickCard" style="left: 25px"
-            src="./assets/img/cards/{{ currentCard }}.png">
+        <img id="firstCard" (click)="takeCard()" *ngIf="game.pickCardAnimation" class="pickCard" style="left: 25px"
+            src="./assets/img/cards/{{ game.currentCard }}.png">
     </div>
 </div>
-<app-game-info [card]="currentCard" class="pinBottom"></app-game-info>
+<app-game-info [card]="game.currentCard" class="pinBottom"></app-game-info>
 
 <button mat-fab color="primary" (click)="openDialog()" class="addButton">
     <mat-icon>add</mat-icon>

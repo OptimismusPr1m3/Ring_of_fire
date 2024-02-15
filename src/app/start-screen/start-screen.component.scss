@@ -5,8 +5,14 @@
     width: 100%;
     background-color: #404040;
     max-width: 100%;
+    overflow: hidden;
+    
     @include dFlex(center, center);
     >img {
+
+        @media(max-width: 800px) {
+            height: 60vh;
+        }
         height: 100vh;
     }
 }
@@ -21,10 +27,18 @@
     >img{
         height: 90px;
         margin-bottom: -400px;
+        @media(max-width: 520px) {
+            height: 60px;
+        }
+        @media(max-width: 350px) {
+            height: 40px;
+        }
         &:hover {
             filter: brightness(1.2);
             cursor: pointer;
         }
     }
 }
+
+
 
